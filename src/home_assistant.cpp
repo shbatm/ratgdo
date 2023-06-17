@@ -28,7 +28,7 @@ void ha_autodiscovery_door(BootstrapManager *bootstrapManager){
 
 	JsonObject device = payload.createNestedObject("device");
 	device["name"] = deviceName;
-    device["identifiers"] = uniqueID;
+	device["identifiers"] = WiFi.macAddress();
 	device["manufacturer"] = "Paul Wieland";
 	device["model"] = "ratgdo";
 	device["sw_version"] = VERSION;
@@ -50,7 +50,7 @@ void ha_autodiscovery_light(BootstrapManager * bootstrapManager){
 
 	JsonObject device = payload.createNestedObject("device");
 	device["name"] = deviceName;
-    device["identifiers"] = uniqueID;
+	device["identifiers"] = WiFi.macAddress();
 	device["manufacturer"] = "Paul Wieland";
 	device["model"] = "ratgdo";
 	device["sw_version"] = VERSION;
@@ -74,7 +74,7 @@ void ha_autodiscovery_obs(BootstrapManager *bootstrapManager){
 
    	JsonObject device = payload.createNestedObject("device");
 	device["name"] = deviceName;
-    device["identifiers"] = uniqueID;
+	device["identifiers"] = WiFi.macAddress();
 	device["manufacturer"] = "Paul Wieland";
 	device["model"] = "ratgdo";
 	device["sw_version"] = VERSION;
